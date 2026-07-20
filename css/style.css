@@ -53,6 +53,7 @@ p {
 .form-control-corporate-2 :checked {
 	border: 2px solid #102a83;
 }
+
 /* End form control corporate 2 */
 
 .title-line {
@@ -67,6 +68,7 @@ p {
 	background: #fffd00;
 	position: absolute;
 }
+
 /*** END ALL ***/
 
 /*** MENU ***/
@@ -156,21 +158,21 @@ p {
 	width: 100%;
 	z-index: 999;
 	top: 57px;
-    transition: height 0.3s ease;
+	transition: height 0.3s ease;
 }
 
 #top-menu-2.show {
-    background: rgba(0, 0, 0, 0.7);
-    box-shadow: rgba(0, 0, 0, 0.25) 5px 0px 5px 3px;
+	background: rgba(0, 0, 0, 0.7);
+	box-shadow: rgba(0, 0, 0, 0.25) 5px 0px 5px 3px;
 }
 
 #top-menu-2.show #navbar-brand-img {
-    height: 47px;
+	height: 47px;
 }
 
 #top-menu-2 #navbar-brand-img {
-    height: 77px;
-    transition: height 0.3s ease;
+	height: 77px;
+	transition: height 0.3s ease;
 }
 
 @media (max-width: 991.98px) {
@@ -180,9 +182,10 @@ p {
 		z-index: 999;
 		top: 0px;
 	}
-    #top-menu-2 #navbar-brand-img  {
-        height: 35px;
-    }
+
+	#top-menu-2 #navbar-brand-img {
+		height: 35px;
+	}
 
 }
 
@@ -236,6 +239,7 @@ p {
 	color: white;
 	margin-bottom: 0;
 }
+
 /*** END CATALOGY ***/
 
 /*** CATALOGY SECTION 2 ***/
@@ -254,6 +258,7 @@ p {
 .catalogy-section-2 .approximation {
 	height: 225px;
 }
+
 /*** END CATALOGY SECTION 2 ***/
 
 /*** SALE SECTION ***/
@@ -351,6 +356,7 @@ p {
 	color: #0e246f;
 	line-height: 26px;
 }
+
 /*** SALE SECTION ***/
 
 /*** ORDER SECTION ***/
@@ -384,6 +390,7 @@ p {
 	font-size: 16px;
 	color: #323232;
 }
+
 /*** END ORDER SECTION ***/
 
 /*** HOME PORTFOLIO ***/
@@ -402,6 +409,7 @@ p {
 	cursor: pointer;
 	opacity: 1;
 }
+
 /*** END HOME PORTFOLIO ***/
 
 /*** SINGLE PRODUCT ***/
@@ -413,6 +421,7 @@ p {
 .similar-section .approximation {
 	height: 300px;
 }
+
 /*** END SINGLE PRODUCT***/
 
 /*** CONTACTS ***/
@@ -425,7 +434,7 @@ p {
 	overflow: hidden;
 }
 
-.contacts-section > .container {
+.contacts-section>.container {
 	padding-top: 75px;
 	padding-bottom: 75px;
 }
@@ -450,6 +459,7 @@ p {
 	left: 50%;
 	right: 0;
 }
+
 /*** END CONTACTS ***/
 
 /*** FOOTER ***/
@@ -469,6 +479,7 @@ footer {
 	font-family: HelveticaNeueCyr-Roman;
 	font-size: 14px;
 }
+
 /*** END FOOTER ***/
 
 /* Задний фон для сообщения об успешной отправки данных */
@@ -510,3 +521,5 @@ footer {
 .text-darkbrown {
 	color: #102a83;
 }
+
+.test {}
