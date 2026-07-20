@@ -22,10 +22,10 @@
                         <button type="button" class="d-block btn btn-corporate-1" data-bs-toggle="modal" data-bs-target="#messageModal">Напишите нам</button>
                     </div>
                     <div class="col-md-6">
-                        <a class="ico-button pe-2" href="https://wa.me/79511004979?web=1&app_absent=1&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%AF%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D0%BB%D0%B0%D0%B4%D1%8C%D1%8F.%D1%80%D1%84"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
-                        <a class="ico-button pe-2" href="https://t.me/+79511004979?text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%AF%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D0%BB%D0%B0%D0%B4%D1%8C%D1%8F.%D1%80%D1%84"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
+                        <a class="ico-button pe-2" target="_blank"  href="https://wa.me/79511004979?web=1&app_absent=1&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%AF%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D0%BB%D0%B0%D0%B4%D1%8C%D1%8F.%D1%80%D1%84"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
+                        <a class="ico-button pe-2" target="_blank"  href="https://t.me/+79511004979?text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%AF%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D0%BB%D0%B0%D0%B4%D1%8C%D1%8F.%D1%80%D1%84"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
                         <!-- <a class="ico-button pe-2" href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/<?php echo get_stylesheet_directory_uri(); ?>/img/ico/inst-ico.png"></a--> 
-                        <a class="ico-button pe-2" href="https://vk.com/club90212067"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/vk-ico.png"></a>
+                        <a class="ico-button pe-2" target="_blank"  href="https://vk.com/club90212067"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/vk-ico.png"></a>
                         <a class="ico-button" href="https://max.ru/u/f9LHodD0cOK7M4By7LiQDPh1RUMKghfAIMozxGWfQ4z0UqIxUEPcisfDN14" target="_blank">
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/max.png">
                         </a>
@@ -39,7 +39,7 @@
         <div class="container">
             <div class="row">
                 <div class="col py-2">
-                    <div id="company-in-footer">©<?php echo date('Y'); ?> Мебельный магазин «Ладья»</div>
+                    <div id="company-in-footer">©<?php echo date("Y"); ?> Мебельный магазин «Ладья»</div>
                     <div id="im-in-footer">Создание и продвижение сайтов: <a href="https://site100.ru" class="text-light">site100.ru</a></div>
                 </div>
             </div>
@@ -147,13 +147,15 @@
 <!-- /Message Modal -->
 
 <!-- Показываем сообщение об успешной отправки -->
-<div style="display: <?php echo $_SESSION['display'] ?>;" onclick="modalClose();">
-	<div id="background-msg" style="display: <?php echo $_SESSION['display'] ?>;"></div>
+<div style="display: <?php echo $_SESSION["display"]; ?>;" onclick="modalClose();">
+	<div id="background-msg" style="display: <?php echo $_SESSION["display"]; ?>;"></div>
 	<button id="btn-close" type="button" class="btn-close btn-close-white" onclick="modalClose();"
 		style="position: absolute; z-index: 9999; top: 15px; right: 15px;"></button>
 	<div id="message">
-		<?php echo $_SESSION['recaptcha'];
-		unset($_SESSION['recaptcha']); ?>
+		<?php
+  echo $_SESSION["recaptcha"];
+  unset($_SESSION["recaptcha"]);
+  ?>
 	</div>
 </div>
 
@@ -436,14 +438,14 @@
     <div id="whatsappBtn" class="callback-whatsapp-button" data-bs-toggle="tooltip" data-bs-placement="left"
         data-bs-custom-class="custom-tooltip" data-bs-title="Whatsapp">
         <a href="https://wa.me/79511004979?web=1&app_absent=1&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%AF%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D0%BB%D0%B0%D0%B4%D1%8C%D1%8F.%D1%80%D1%84"
-            target="blank">
+            target="_blank" >
             <div class="callback-whatsapp-button-ico"></div>
         </a>
     </div>
     <div id="telegramBtn" class="callback-telegram-button" data-bs-toggle="tooltip" data-bs-placement="left"
         data-bs-custom-class="custom-tooltip" data-bs-title="Telegram">
         <a href="https://t.me/+79511004979?text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%AF%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D0%BB%D0%B0%D0%B4%D1%8C%D1%8F.%D1%80%D1%84"
-            target="blank">
+            target="_blank" >
             <div class="callback-telegram-button-ico"></div>
         </a>
     </div>
@@ -527,7 +529,7 @@
     }
 </script>
 <!-- /Callback button JS -->
-	<!-- <?php include get_template_directory() . '/inc/snowflake/snowflake.php'; ?> -->
+	<!-- <?php include get_template_directory() . "/inc/snowflake/snowflake.php"; ?> -->
 
     <script>
         prilipalo();

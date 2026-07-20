@@ -1,12 +1,13 @@
 <?php
-	
-	session_start();
-	
-	if ( isset( $_SESSION['win'] ) ) {
-		unset( $_SESSION['win'] );
-		$_SESSION['display'] = "block";
-	} else { $_SESSION['display'] = "none"; }
-	
+
+session_start();
+
+if (isset($_SESSION["win"])) {
+	unset($_SESSION["win"]);
+	$_SESSION["display"] = "block";
+} else {
+	$_SESSION["display"] = "none";
+}
 ?>
 
 
@@ -25,7 +26,7 @@
         <meta name="keywords" content="<?php echo wp_get_document_title(); ?>" />
         <meta property="og:locale" content="ru_RU" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+        <meta property="og:site_name" content="<?php bloginfo("name"); ?>" />
         <meta property="og:title" content="<?php echo wp_get_document_title(); ?>" />
         
         <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/favicon.png" type="image/x-icon" id="favicon">
@@ -81,19 +82,19 @@
 							<a href="tel:84912246429" id="top-menu-tel" class="nav-link"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/phone-ico.png" class="me-2">8 (4912) 24-64-29</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link ico-button pe-0" href="https://wa.me/79511004979?web=1&app_absent=1&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%AF%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D0%BB%D0%B0%D0%B4%D1%8C%D1%8F.%D1%80%D1%84"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
+							<a class="nav-link ico-button pe-0" target="_blank"  href="https://wa.me/79511004979?web=1&app_absent=1&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%AF%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D0%BB%D0%B0%D0%B4%D1%8C%D1%8F.%D1%80%D1%84"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link ico-button pe-0" href="https://t.me/+79511004979?text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%AF%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D0%BB%D0%B0%D0%B4%D1%8C%D1%8F.%D1%80%D1%84"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
+							<a class="nav-link ico-button pe-0" target="_blank"  href="https://t.me/+79511004979?text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%AF%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D0%BB%D0%B0%D0%B4%D1%8C%D1%8F.%D1%80%D1%84"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
 						</li>
 						<!--li class="nav-item">
 							<a class="nav-link ico-button pe-0" href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/<?php echo get_stylesheet_directory_uri(); ?>/img/ico/inst-ico.png"></a>
 						</li-->
 						<!-- <li class="nav-item">
-							<a class="nav-link ico-button" href="https://vk.com/club90212067"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/vk-ico.png"></a>
+							<a class="nav-link ico-button" target="_blank"  href="https://vk.com/club90212067"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/vk-ico.png"></a>
 						</li> -->
                         <!-- <li class="nav-item">
-							<a class="nav-link ico-button" href="https://vk.com/club90212067"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/vk-ico.png"></a>
+							<a class="nav-link ico-button" target="_blank"  href="https://vk.com/club90212067"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/vk-ico.png"></a>
 						</li>  -->
                         <li class="nav-item">
                             <a class="nav-link ico-button pe-0" href="https://max.ru/u/f9LHodD0cOK7M4By7LiQDPh1RUMKghfAIMozxGWfQ4z0UqIxUEPcisfDN14" target="_blank">
@@ -120,41 +121,45 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent2">
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-                            <a class="nav-link <?php echo (is_front_page()) ? 'active' : ''; ?>" aria-current="page" href="/">Главная</a>
+                            <a class="nav-link <?php echo is_front_page() ? "active" : ""; ?>" aria-current="page" href="/">Главная</a>
 						</li>
 						<li class="nav-item d-none d-xl-inline">
 							<span class="nav-link px-1"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/menu-point-ico.png"></span>
 						</li>
 						<li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle <?php echo (is_shop() || is_product_category() || is_product()) ? 'active' : ''; ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle <?php echo is_shop() || is_product_category() || is_product()
+                            	? "active"
+                            	: ""; ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 								Каталог
 							</a>
 							<ul class="dropdown-menu">
 								<?php
-									$terms = get_terms( array(
-										'taxonomy' => 'product_cat',
-										'hide_empty' => true,
-										'pad_counts'=> true,
-										'orderby' => 'menu_order',
-										'parent' => 0
-									) );
+        $terms = get_terms([
+        	"taxonomy" => "product_cat",
+        	"hide_empty" => true,
+        	"pad_counts" => true,
+        	"orderby" => "menu_order",
+        	"parent" => 0,
+        ]);
 
-									if( $terms ) :
-										foreach( $terms as $term ) : ?>
-											<li><a class="dropdown-item" href="<?php echo get_term_link($term->term_id);?>"><?php echo $term->name;?></a></li>
+        if ($terms):
+        	foreach ($terms as $term): ?>
+											<li><a class="dropdown-item" href="<?php echo get_term_link($term->term_id); ?>"><?php echo $term->name; ?></a></li>
 										<?php endforeach;
-									endif;
-								?>
+        endif;
+        ?>
 							</ul>
 						</li>
 						<li class="nav-item">
-                            <a class="nav-link <?php echo (is_page_template('portfolio.php') || is_post_type_archive('portfolio') || is_page('наши-работы')) ? 'active' : ''; ?>" href="/наши-работы">Наши работы</a>
+                            <a class="nav-link <?php echo is_page_template("portfolio.php") || is_post_type_archive("portfolio") || is_page("наши-работы")
+                            	? "active"
+                            	: ""; ?>" href="/наши-работы">Наши работы</a>
 						</li>
 						<li class="nav-item d-none d-xl-inline">
 							<span class="nav-link px-1"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/menu-point-ico.png"></span>
 						</li>
 						<li class="nav-item">
-                            <a class="nav-link <?php echo (is_page_template('actions.php') || is_page('акции')) ? 'active' : ''; ?>" href="/акции">Акции</a>
+                            <a class="nav-link <?php echo is_page_template("actions.php") || is_page("акции") ? "active" : ""; ?>" href="/акции">Акции</a>
 						</li>
 						<li class="nav-item d-none d-xl-inline">
 							<span class="nav-link px-1"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/menu-point-ico.png"></span>
@@ -170,10 +175,10 @@
 							<a id="top-menu-tel" class="nav-link" href="tel:89511004979">8 (951) 100-49-79</a>
 						</li>
 						<li class="nav-item d-xl-none">
-							<a class="ico-button pe-2" href="https://wa.me/79511004979?web=1&app_absent=1&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%AF%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D0%BB%D0%B0%D0%B4%D1%8C%D1%8F.%D1%80%D1%84"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
-							<a class="ico-button pe-2" href="https://t.me/+79511004979?text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%AF%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D0%BB%D0%B0%D0%B4%D1%8C%D1%8F.%D1%80%D1%84"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
+							<a class="ico-button pe-2" target="_blank"  href="https://wa.me/79511004979?web=1&app_absent=1&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%AF%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D0%BB%D0%B0%D0%B4%D1%8C%D1%8F.%D1%80%D1%84"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
+							<a class="ico-button pe-2" target="_blank"  href="https://t.me/+79511004979?text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%AF%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D0%BB%D0%B0%D0%B4%D1%8C%D1%8F.%D1%80%D1%84"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
 							<!-- <a class="ico-button pe-2" href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/<?php echo get_stylesheet_directory_uri(); ?>/img/ico/inst-ico.png"></a-->
-							<a class="ico-button" href="https://vk.com/club90212067"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/vk-ico.png"></a>
+							<a class="ico-button" target="_blank"  href="https://vk.com/club90212067"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/vk-ico.png"></a>
 						</li>
 						<!-- End mobile menu -->
 					</ul>
