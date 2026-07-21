@@ -25,6 +25,4 @@ jobs:
             git pull
             
             # Если кто то изменил файлы на сервере минуя GitHub, перезаписываем версию на сервере из GitHub
-            # git reset --hard HEAD
-            # git pull origin main
-            git reset --hard origin/main
+            # git reset --hard origin/main
